@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "139701247462",
+    "project_id": "login-app-6f06f",
+    "storage_bucket": "login-app-6f06f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:139701247462:android:8ce9e0e438fcb5fb50ca27",
+        "android_client_info": {
+          "package_name": "com.andyg.login_app_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAB50iXHFDFZZ9ExmUOCHO5fE10ACQ4XmU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
