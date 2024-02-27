@@ -2,12 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:login_app_flutter/home_page.dart';
 import 'package:login_app_flutter/main.dart';
 
+
 class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+  const LoginPage({Key? key});
 
   @override
   Widget build(BuildContext context) {
+    String passwordLogin = '';
+
+    
     return MaterialApp(
+
+
       debugShowCheckedModeBanner: false,
       title: 'Login',
       home: Scaffold(
@@ -56,9 +62,13 @@ class LoginPage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const TextField(
+                    
+                    TextField(
                       obscureText: true,
-                      decoration: InputDecoration(
+                      onChanged: (value){
+                        passwordLogin = value;
+                      },
+                      decoration: const InputDecoration(
                         labelText: 'Contraseña',
                         labelStyle: TextStyle(
                           fontSize: 18,
@@ -68,6 +78,7 @@ class LoginPage extends StatelessWidget {
                     const SizedBox(height: 20), // Agregar espacio entre los campos de texto y los botones
                     ElevatedButton(
                       onPressed: () {
+                        print('Contraseña ingresada: $passwordLogin');
                         Navigator.push(
                           context, 
                           MaterialPageRoute(builder: (context) => const HomePage())
