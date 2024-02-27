@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_app_flutter/home_page.dart';
 import 'package:login_app_flutter/main.dart';
 
 class LoginPage extends StatelessWidget {
@@ -66,7 +67,12 @@ class LoginPage extends StatelessWidget {
                     ),
                     const SizedBox(height: 20), // Agregar espacio entre los campos de texto y los botones
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context, 
+                          MaterialPageRoute(builder: (context) => const HomePage())
+                        );
+                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.brown,
                         foregroundColor: Colors.white,
