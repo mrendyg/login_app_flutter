@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_app_flutter/main.dart';
 
 
 class HomePage extends StatelessWidget {
@@ -33,7 +34,25 @@ class HomePage extends StatelessWidget {
                         color: Colors.grey.shade700,
                       ),
                     ),
-                    ElevatedButton(onPressed: () {}, child: const Text('Volver'))
+                    ElevatedButton(onPressed: (){}, 
+                      style: ElevatedButton.styleFrom(
+                        
+                        backgroundColor: Colors.brown,
+                        foregroundColor: Colors.white,
+                        side: const BorderSide(color: Colors.yellow),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(0), // Establece el radio de borde a cero para hacerlo cuadrado
+                        ),
+                        minimumSize: const Size(double.infinity, 50),
+                      ),
+                      child: const Text('Descuentos'),
+                    ),
+                    ElevatedButton(onPressed: () {
+                      Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => const MyApp())
+                      );
+                    }, child: const Text('Volver')
+                    ),
                   ]  
                   
                 )
