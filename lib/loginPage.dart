@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:login_app_flutter/home_page.dart';
 import 'package:login_app_flutter/main.dart';
 
@@ -78,6 +79,15 @@ class LoginPage extends StatelessWidget {
                     const SizedBox(height: 20), // Agregar espacio entre los campos de texto y los botones
                     ElevatedButton(
                       onPressed: () {
+                        Fluttertoast.showToast(
+                              msg: "Este es un mensaje de toast",
+                              toastLength: Toast.LENGTH_SHORT,
+                              gravity: ToastGravity.CENTER,
+                              timeInSecForIosWeb: 1,
+                              backgroundColor: Colors.grey,
+                              textColor: Colors.white,
+                              fontSize: 16.0,
+                            );
                         print('Contraseña ingresada: $passwordLogin');
                         Navigator.push(
                           context, 

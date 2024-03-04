@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:login_app_flutter/loginPage.dart';
 import 'package:login_app_flutter/register_page.dart';
 import 'firebase_options.dart';
@@ -60,6 +61,7 @@ class MyApp extends StatelessWidget {
                       children: [
                         ElevatedButton(
                           onPressed: () {
+                            
                             Navigator.push(
                               context,
                               MaterialPageRoute(builder: (context) => const LoginPage()),

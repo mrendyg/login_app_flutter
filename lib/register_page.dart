@@ -85,6 +85,10 @@ class RegisterPage extends StatelessWidget {
                     const SizedBox(height: 20),
                     ElevatedButton(
                       onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const MyApp()),
+                        );
 
                       }, 
                       style: ElevatedButton.styleFrom(
@@ -93,7 +97,7 @@ class RegisterPage extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 20),
                         minimumSize: const Size(double.infinity, 50),
                       ),
-                      child: const Text('Crear')
+                      child: const Text('Registrarse')
                     ),
                     const SizedBox(height: 20),
                     ElevatedButton(
